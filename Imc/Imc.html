@@ -1,38 +1,57 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br"> 
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="Imc.css"> <!-- Importa o arquivo de estilo CSS -->
     <title>Calculadora de IMC</title>
 </head>
+
 <body>
+    <!-- Cabeçalho da página -->
     <header id="boasVindas">
-        <h1 id="texto">Calculadora de IMC</h1>
+        <h1 id="texto">Calculadora de IMC</h1> 
+
+        <!-- Menu de navegação entre as páginas -->
+        <nav>
+            <a href="../Home/Home.html">Home</a> <!-- Link para a página inicial -->
+            <a href="../Imc/Imc.html">Calcular IMC</a> <!-- Link para a própria página de IMC -->
+            <a href="../Calculador Idade/Idade.html">Fase da Vida</a> <!-- Link para a página de cálculo de fase da vida -->
+        </nav>
     </header>
+
+    <!-- Seção explicativa sobre os resultados do IMC -->
     <div id="explicacao">
         <h3 id="descExercicio">
+            <!-- Lista de faixas do IMC e seus significados -->
             Resultado abaixo de 17 - Muito abaixo do peso;<br>
             Resultado entre 17 e 18,49 - Abaixo do peso;<br>
             Resultado entre de 18,5 e 24,99 - Peso Ideal;<br>
             Resultado entre de 25 e 29,99 - Sobrepeso;<br>
             Resultado entre de 30 e 34,9 - Obesidade grau 1;<br>
             Resultado entre de 35 e 39,9 - Obesidade grau 2;<br>
-            Resultado acima de 40 - Obesidade grau 3 (morbida);<br>
+            Resultado acima de 40 - Obesidade grau 3 (mórbida);<br>
         </h3>
     </div>
 
-    <form onsubmit="return calcular(event)">
-        <label>Digite seu peso:</label><br><br>
-        <input type="text" nome="peso" id="peso" placeholder="exemplo: 65" /><br><br>
+    <!-- Formulário para o usuário preencher -->
+    <form onsubmit="return calcular(event)"> <!-- Ao enviar, chama a função calcular() -->
+        <label>Digite seu peso:</label><br><br> <!-- Descrição para o campo peso -->
+        <input type="text" nome="peso" id="peso" placeholder="exemplo: 65" /><br><br> <!-- Campo de entrada do peso -->
 
-        <label>Digite sua altura</label><br><br>
-        <input type="text" nome="altura" id="altura" placeholder="exemplo: 1.90" /><br><br>
+        <label>Digite sua altura</label><br><br> <!-- Descrição para o campo altura -->
+        <input type="text" nome="altura" id="altura" placeholder="exemplo: 1.90" /><br><br> <!-- Campo de entrada da altura -->
         
-        <input type="submit" id="botao-resultado" value="Calcular IMC">
+        <input type="submit" id="botao-resultado" value="Calcular IMC"> <!-- Botão para enviar o formulário -->
     </form>
-<div id="resultado"></div>
+
+    <!-- Div onde será mostrado o resultado do cálculo -->
+    <div id="resultado"></div>
+
+    <!-- Importa o arquivo JavaScript para fazer o cálculo do IMC -->
     <script src="imc.js"></script>
 </body>
+
 </html>

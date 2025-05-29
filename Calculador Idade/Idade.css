@@ -1,97 +1,128 @@
+/* Remove margens e paddings padrão */
 * {
     margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  
+    padding: 0;
+    box-sizing: border-box;
 }
+
+/* Define estilo geral do corpo: fonte, tamanho total da tela, layout em coluna, fundo escuro */
 body {
     font-family: Arial, sans-serif;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #1a1a1a;
 }
 
+/* Estilo do cabeçalho: texto centralizado, fundo escuro, padding e cor de texto branca */
+header {
+    text-align: center;
+    font-size: 24px;
+    background-color: #222;
+    padding: 20px;
+    color: #fff;
+}
 
-  main {
+/* Menu de navegação */
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Área principal centralizada, ocupa o espaço disponível */
+main {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-  
-  header {
-    text-align: center;
-    font-size: 20px;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(31, 31, 31);
-    padding: 20px;
-    color: white;
-  }
-  
-  #formulario {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   padding: 20px;
-  }
-
-  label {
+/* Container do formulário: colunas, alinhado ao centro, fundo mais claro, borda arredondada e sombra */
+#formulario {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2c2c2c;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+/* Estilo dos rótulos (labels): texto branco com espaçamento inferior */
+label {
     margin-bottom: 5px;
-    color: white;
-  }
-  
-  input {
-    width: 200px;
-    padding: 5px;
+    color: #fff;
+}
+
+/* Estilo dos inputs: largura fixa, padding, sem borda, fundo escuro, texto branco, bordas arredondadas */
+input {
+    width: 220px;
+    padding: 8px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: none;
+    background-color: #444;
+    color: #fff;
     margin-bottom: 20px;
-    color: white;
-  }
-  
-  button {
-    background-color: #b0bbb1;
-    color: white;
-    padding: 10px 20px;
+}
+
+/* Estilo do botão: verde, texto branco, borda arredondada, bold, transição suave no hover */
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 25px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-bottom: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* Quando o mouse passa por cima do botão, muda o tom de verde */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Área do resultado: texto grande e em negrito, branco com sombra preta, centralizado, borda arredondada */
+#resultado {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    max-width: 300px;
+    word-wrap: break-word; /* Quebra o texto se for muito longo */
+}
+
+/* Estilo do rodapé: centralizado, fundo escuro, texto branco */
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  button:hover {
-    background-color: #9ea89f;
-  }
-  
-  #resultado {
-    background-position: center;
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    color: white;
-    text-shadow: 2px 2px rgb(116, 116, 116);
-    margin: 20px;
-  }
-  
-  
+    background-color: #222;
+    padding: 10px;
+    color: #fff;
+}
 
-  footer {
-     align-items: center;
-     justify-content: center;
-     display:flex;
-     background-color: rgb(31, 31, 31);
-     padding: 10px;
-     color: white;
-  }
+/* Remove margem inferior do título principal */
+h1 {
+    margin-bottom: 15px;
+}
 
-  h1 {
-    margin: 0px;
-  }
+
+
+
+/* Cor vermelho forte para inputs sem valor ou inválidos */
+.sem-valor {
+    background-color: #ef5350;
+}

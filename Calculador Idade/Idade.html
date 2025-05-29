@@ -2,32 +2,39 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <link href="Idade.css" rel="stylesheet">
-    <title>Classificação de Idade</title>
-
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <link href="Idade.css" rel="stylesheet"> <!-- Importa o arquivo CSS para estilizar a página -->
+    <title>Classificação de Idade</title> <!-- Define o título que aparece na aba do navegador -->
 </head>
 
 <body>
     <header>
-        <h1>Classificação por idade</h1>
+        <h1>Classificação por idade</h1> <!-- Título principal da página -->
+         <nav>
+            <a href="../Home/Home.html">Home</a> <!-- Link para a página Home -->
+            <a href="../Imc/Imc.html">Calcular IMC</a> <!-- Link para a página de cálculo do IMC -->
+            <a href="../Calculador Idade/Idade.html">Fase da Vida</a> <!-- Link para a página do cálculo de fase da vida -->
+        </nav>
     </header>
+
     <main>
+        <!-- Formulário onde o usuário insere seu nome e idade -->
+        <div id="formulario">
+            <label for="nome">Nome:</label> <!-- Rótulo do campo nome -->
+            <input type="text" id="nome" placeholder="Digite aqui seu nome..."><br> <!-- Campo de texto para o nome -->
 
-   
-    <div id="formulario">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" placeholder="Digite aqui seu nome..."><br>
-        <label for="idade">Idade:</label>
-        <input type="number" id="idade" placeholder="Digite aqui sua idade..."><br>
-        <button onclick="verificarFase()">Avaliar idade</button>
+            <label for="idade">Idade:</label> <!-- Rótulo do campo idade -->
+            <input type="number" id="idade" placeholder="Digite aqui sua idade..."><br> <!-- Campo numérico para a idade -->
 
-        <div id="resultado"></div>
-    </div>
-     </main>
-    <footer> 2025 - Fam - Americana - SP</footer>
-</body>
+            <button onclick="verificarFase()">Avaliar idade</button> <!-- Botão que chama a função verificarFase() quando clicado -->
 
-<script src="Idade.js"></script>
+            <div id="resultado"></div> <!-- Div onde será mostrado o resultado da avaliação -->
+        </div>
+    </main>
 
+    <footer>
+        2025 - Fam - Americana - SP <!-- Rodapé da página com informações do projeto -->
+    </footer>
+
+    <script src="Idade.js"></script> <!-- Importa o arquivo JavaScript responsável pela lógica -->
 </html>

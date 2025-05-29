@@ -1,0 +1,102 @@
+/* Remove margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Define fundo dark e cor do texto clara */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* fundo escuro */
+    color: #ffffff; /* texto claro */
+    min-height: 100vh; /* altura mínima da tela inteira */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+header h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Menu de navegação */
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+
+/* Área principal */
+main {
+    flex: 1; /* ocupa o espaço disponível */
+    padding: 20px;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Container de cada informação dos aluno */
+.aluno {
+    display: flex;
+    align-items: center;
+    background-color: #1f1f1f;
+    padding: 10px;
+    margin: 10px auto;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Imagem do aluno */
+.ImagemAluno {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* deixa a imagem redonda */
+    object-fit: cover; /* garante que a imagem se ajuste bem */
+    margin-right: 20px;
+    border: 2px solid #ffffff; /* borda branca */
+}
+
+/* Nome do aluno */
+.aluno h3 {
+    font-size: 20px;
+}
+
+/* Seção de explicação */
+section {
+    max-width: 700px;
+    margin: 30px auto;
+    text-align: center;
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #1f1f1f;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
